@@ -1,5 +1,9 @@
 # L1X FVN Node Setup Guide
 
+## Useful Links:
+- YouTube Tutorial: [Watch the Setup Guide on YouTube](https://www.youtube.com/watch?v=rVmyP-yaMTA)
+- GitHub Wiki: [Visit the GitHub Wiki for Detailed Documentation](https://github.com/L1X-Foundation-Public/l1x-fvn-node-public/wiki)
+
 ## System Requirements:
 - Operating System: Linux (recommended), MacOS
 - RAM: 8GB Minimum
@@ -14,7 +18,7 @@ Ensure that you have Git, Docker and Docker Compose installed on your system:
 ### Step 0: Git Clone the repository
 
 ```
-git clone git@github.com:L1X-Foundation-Public/l1x-fvn-node-public.git
+git clone [git@github.com:L1X-Foundation-Public/l1x-fvn-node-public.git](https://github.com/L1X-Foundation-Public/l1x-fvn-node-public)
 cd l1x-fvn-node
 ```
 
