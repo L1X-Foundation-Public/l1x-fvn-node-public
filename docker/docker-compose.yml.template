@@ -1,0 +1,35 @@
+version: '3'  # Specifying docker-compose version for clarity
+services:
+  v2_core_server:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: v2_core_server
+    volumes:
+      - ../bin/l1x-core:/app/l1x-core
+      - ./run-server.sh:/app/run-server.sh
+      - ../config.toml:/app/config.toml
+      - ../chain_data:/app/l1x_data
+    command: ./run-server.sh
+    restart: on-failure
+    ports:
+      - "50051:50051"  # Host port:Container port
+      - "50052:50052"  # You can add more ports as needed
+    depends_on:
+      - v2_core_db
+
+  v2_core_db:
+    image: postgres
+    container_name: v2_core_db  # Optional for naming the container
+    environment:
+      POSTGRES_USER: <PLACEHOLDER_POSTGRES_USER>
+      POSTGRES_PASSWORD: <PLACEHOLDER_POSTGRES_PASS>
+    volumes:
+      - ../l1x-db/data:/var/lib/postgresql/data  # Mapping host volume to container's data directory
+      - ./postgresql.conf:/etc/postgresql/postgresql.conf  # Volume for specific Postgres config file
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U l1x"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf

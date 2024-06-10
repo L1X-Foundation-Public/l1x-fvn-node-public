@@ -1,0 +1,58 @@
+# Node Config
+
+# Without 0x prefix
+node_private_key = "<REPLACE_NODE_PRIVATE_KEY>"
+node_address = "<REPLACE_NODE_ADDRESS>"
+fvn_uuid = "<REPLACE_FVN_UUID>"
+
+
+node_verifying_key = ""
+
+# DB Config
+postgres_host = "v2_core_db"
+postgres_username = "<PLACEHOLDER_POSTGRES_USER>"
+postgres_password = "<PLACEHOLDER_POSTGRES_PASSWORD>"
+db_type = 1  # 0 = Cassandra, 1 = Postgres, 2 = RocksDb
+postgres_pool_size = 10
+postgres_db_name = "l1x"
+postgres_test_db_name = "l1x_test"
+rocksdb_name = "l1x_rocks"
+
+# Cassandra Config
+cassandra_host = "127.0.0.1:9042"
+cassandra_username = "cassandra"
+cassandra_password = "cassandra"
+cassandra_keyspace = "l1x"
+
+# Node Operational Config
+dev_mode = false
+multinode_mode = false
+replication_enable = false  # make true for production
+wb_lists_check = true  # make true for production
+whitelist_source = "whitelist_config.json"
+blacklist_source = "blacklist_config.json"
+max_size = 100
+fee_limit = 10000000
+rate_limit = 15
+time_frame_seconds = 100
+expiration_seconds = 100
+block_time = 3000
+eth_chain_id = 1068  # devnet chain_id
+
+# Network Config
+node_port = "5010"
+node_ip_address = "/ip4/0.0.0.0/tcp/5010"
+node_metadata = "metadata"
+cluster_address = "0101010101010101010101010101010101010101"
+sync_node_address = ""
+grpc_port = "0.0.0.0:50052"
+jsonrpc_port = "0.0.0.0:50051"
+validator_pool_address = "522b3294fe78d57a1d7e1c37393f11841f6a9494"
+
+# Sync Config
+sync_node_time_interval = 10  # interval in seconds. Archive node uses this to sync with boot node
+boot_nodes = ["/ip4/13.126.11.86/tcp/5010/p2p/FVN_BOOTNODE-1","/ip4/13.232.194.242/tcp/5010/p2p/FVN_BOOTNODE-2","/ip4/3.110.183.243/tcp/5010/p2p/FVN_BOOTNODE-3","/ip4/3.108.252.128/tcp/5010/p2p/FVN_BOOTNODE-4"]  # addresses of the boot node
+archive_nodes = ["https://v2-mainnet-archive.l1x.foundation/"]  # base url of s3 bucket
+archive_public_key = "03aa7c205ddb5048408f48de46002c171a712613058c8ee12c73aeeed5ae016f2b"  # public key of archive node
+snapshot_time_interval = 28800  # interval in seconds. Archive node uses this to create snapshot
+disable_snapshot = false
