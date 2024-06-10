@@ -19,7 +19,7 @@ Ensure that you have Git, Docker and Docker Compose installed on your system:
 
 ```
 git clone https://github.com/L1X-Foundation-Public/l1x-fvn-node-public
-cd l1x-fvn-node
+cd l1x-fvn-node-public
 ```
 
 
