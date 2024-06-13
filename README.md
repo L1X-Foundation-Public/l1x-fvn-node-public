@@ -135,4 +135,12 @@ Run:
 docker logs -f --tail 10 v2_core_server
 ```
 
+## To Restart L1X Node 
+
+Run:
+
+```
+docker restart v2_core_server
+```
+
 
