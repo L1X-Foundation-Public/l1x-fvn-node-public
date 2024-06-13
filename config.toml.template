@@ -50,7 +50,7 @@ jsonrpc_port = "0.0.0.0:50051"
 validator_pool_address = "522b3294fe78d57a1d7e1c37393f11841f6a9494"
 
 # Sync Config
-sync_node_time_interval = 10  # interval in seconds. Archive node uses this to sync with boot node
+sync_node_time_interval = 20  # interval in seconds. Archive node uses this to sync with boot node
 boot_nodes = ["/ip4/13.126.11.86/tcp/5010/p2p/FVN_BOOTNODE-1","/ip4/13.232.194.242/tcp/5010/p2p/FVN_BOOTNODE-2","/ip4/3.110.183.243/tcp/5010/p2p/FVN_BOOTNODE-3","/ip4/3.108.252.128/tcp/5010/p2p/FVN_BOOTNODE-4"]  # addresses of the boot node
 archive_nodes = ["https://v2-mainnet-archive.l1x.foundation/"]  # base url of s3 bucket
 archive_public_key = "03aa7c205ddb5048408f48de46002c171a712613058c8ee12c73aeeed5ae016f2b"  # public key of archive node
