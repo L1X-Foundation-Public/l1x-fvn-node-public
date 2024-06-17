@@ -17,6 +17,10 @@ services:
       - "50052:50052"  # You can add more ports as needed
     depends_on:
       - v2_core_db
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2048m"
 
   v2_core_db:
     image: postgres
@@ -33,3 +37,7 @@ services:
       timeout: 5s
       retries: 5
     command: postgres -c config_file=/etc/postgresql/postgresql.conf
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2048m"
