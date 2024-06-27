@@ -6,8 +6,8 @@
 
 ## System Requirements:
 - Operating System: Linux (recommended), MacOS
-- RAM: 8GB Minimum
-- Storage: 100 GB Minimum
+- RAM: 16GB Minimum
+- Storage: 200 GB Minimum
 - CPU: 4 CPU/vCPU min
 - Docker: Version 24.0.7 or higher, build afdd53b
 - Docker Compose: Version 1.29 or higher
