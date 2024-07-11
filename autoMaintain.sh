@@ -2,6 +2,7 @@
 
 
 DOCKER_COMPOSE=false
+BLOCK_DIFF_THRESHOLD=1000
 
 # Detect the operating system
 OS=$(uname)
@@ -77,7 +78,7 @@ current_head_block_number=$(fetch_head_block_number)
 echo "Latest Block: $latest_block"
 echo "Head Block Number: $current_head_block_number"
 
-if [ $((current_head_block_number - latest_block)) -gt 10 ]; then
+if [ $((current_head_block_number - latest_block)) -gt $BLOCK_DIFF_THRESHOLD ]; then
 
     $DOCKER_COMPOSE -f $SCRIPT_DIR/docker/docker-compose.yml down
 
