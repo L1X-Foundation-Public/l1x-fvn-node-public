@@ -59,4 +59,13 @@ else
     echo "No directory found for chain_data."
 fi
 
+# Remove the l1x-db directory
+L1X_DB_DIR="./l1x-db"
+if [ -d "$L1X_DB_DIR" ]; then
+    echo "Removing directory $L1X_DB_DIR..."
+    rm -rf "$L1X_DB_DIR"
+else
+    echo "No directory found for l1x-db."
+fi
+
 echo "All specified containers have been stopped and removed, the volume has been deleted, and the directory chain_data has been removed!"
