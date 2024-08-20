@@ -56,3 +56,4 @@ archive_nodes = ["https://v2-mainnet-archive.l1x.foundation/"]  # base url of s3
 archive_public_key = "03aa7c205ddb5048408f48de46002c171a712613058c8ee12c73aeeed5ae016f2b"  # public key of archive node
 snapshot_time_interval = 28800  # interval in seconds. Archive node uses this to create snapshot
 disable_snapshot = false
+rpc_disable_estimate_fee = false
